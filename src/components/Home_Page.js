@@ -1,4 +1,5 @@
 import React from 'react'
+import { ProductCard } from './ProductCard';
 
 export function HomePage({setName, setit}) {
 
@@ -41,17 +42,7 @@ export function HomePage({setName, setit}) {
             <div className='rounded m-1 shadow-lg'>
             <h1>Top Products</h1>
             <div style={{display:'flex'}}>
-            {data.map((data1)=>{return(<>
-                <div className="card" style={{width: "18rem", marginRight:"10px", marginLeft:"10px"}}>
-                <a onClick={()=>{setName(data1.title,data1.image,data1.description,data1.price,data1.rating.rate); setit(5);}}><img className="card-img-top image4" src={data1.image} alt="Card image cap"/></a>
-                <div className="card-body">
-                    <h5 className="card-title">{data1.title}</h5>
-                    <h5 style={{color:"green"}}>Rs {data1.price}</h5>
-                    <a className="btn btn-primary m-2">Add to Cart</a>
-                    <a href=""><img className='image-icon2' src="https://k7.pngheat.com/preview/95/220/943/heart-red-icon-symbol-red-heart-transparent-png-clip-art.jpg" alt="" /></a>
-                </div>
-                </div>
-            </>)})} 
+            {data.map((data1)=>{return(<><ProductCard title={data1.title} image={data1.image} description={data1.description} price={data1.price} rating={data1.rating} setit={setit} setName={setName} /></>)})} 
             </div>
             </div>
         </>
