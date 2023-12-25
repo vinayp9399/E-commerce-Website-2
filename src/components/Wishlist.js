@@ -1,11 +1,7 @@
 import React from 'react'
 import { WishlistItems } from './WishlistItems'
 
-export function Wishlist(props) {
-    let wishlists = [];
-    
-    let a ={name:props.name1,image:props.image1,price:props.price1}
-    wishlists.push(a); 
+export function Wishlist({wishlists}) {
 
 
     return (

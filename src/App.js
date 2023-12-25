@@ -26,6 +26,7 @@ const App = () => {
   const [name1, setname1] = useState('');
   const [image1, setimage1] = useState('');
   const [price1, setprice1] = useState('');
+  const [wishlists, setwishlists]=useState([]);
   
   let clickMe=(name,image,description, price,rate)=>{
     setName(name);
@@ -43,6 +44,12 @@ const App = () => {
     setname1(name);
     setimage1(image);
     setprice1(price);
+    let a = {name:name1,image:image1,price:price1};
+    let updatedwishlist = [...wishlists,a];
+    let filtered = updatedwishlist.filter(function (el) {
+      return el != {};
+  });
+    setwishlists(filtered);
   };
 
 
@@ -59,7 +66,7 @@ const App = () => {
     case 5:
       return <><Navbar setit={setit}/><ProductDescription name={name} image={image} description={description} price={price} rate={rate} /></>;
     case 6:
-      return <><Navbar setit={setit}/><Wishlist name1={name1} image1={image1} price1={price1}/></>;
+      return <><Navbar setit={setit}/><Wishlist wishlists={wishlists}/></>;
     case 7:
       return <><Navbar setit={setit}/><Cart name={name} image={image} description={description} /></>;    
       
