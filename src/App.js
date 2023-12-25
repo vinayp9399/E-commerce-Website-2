@@ -22,6 +22,10 @@ const App = () => {
   const [price, setPrice] = useState('');
   const [rate, setRate] = useState('');
   const [screen, setScreen] = useState(0);
+
+  const [name1, setname1] = useState('');
+  const [image1, setimage1] = useState('');
+  const [price1, setprice1] = useState('');
   
   let clickMe=(name,image,description, price,rate)=>{
     setName(name);
@@ -35,25 +39,32 @@ const App = () => {
     setScreen(e);
   };
 
+  let setwishlist=(name,image,price)=>{
+    setname1(name);
+    setimage1(image);
+    setprice1(price);
+  };
+
+
 
   switch (screen) {
     case 1:
-      return <><Navbar setit={setit}/><Men setName={clickMe} setit={setit}/></>;
+      return <><Navbar setit={setit}/><Men setName={clickMe} setit={setit} setwishlist={setwishlist}/></>;
     case 2:
-      return <><Navbar setit={setit}/><Women  setName={clickMe} setit={setit}/></>;
+      return <><Navbar setit={setit}/><Women  setName={clickMe} setit={setit} setwishlist={setwishlist}/></>;
     case 3:
-      return <><Navbar setit={setit}/><Electronics  setName={clickMe} setit={setit}/></>;
+      return <><Navbar setit={setit}/><Electronics  setName={clickMe} setit={setit} setwishlist={setwishlist}/></>;
     case 4:
-      return <><Navbar setit={setit}/><Jewelery  setName={clickMe} setit={setit}/></>;
+      return <><Navbar setit={setit}/><Jewelery  setName={clickMe} setit={setit} setwishlist={setwishlist}/></>;
     case 5:
       return <><Navbar setit={setit}/><ProductDescription name={name} image={image} description={description} price={price} rate={rate} /></>;
     case 6:
-      return <><Navbar setit={setit}/><Wishlist name={name} image={image} description={description} /></>;
+      return <><Navbar setit={setit}/><Wishlist name1={name1} image1={image1} price1={price1}/></>;
     case 7:
       return <><Navbar setit={setit}/><Cart name={name} image={image} description={description} /></>;    
       
     case 0:
-      return <><Navbar setit={setit}/><HomePage setName={clickMe} setit={setit}/></>;
+      return <><Navbar setit={setit}/><HomePage setName={clickMe} setit={setit} setwishlist={setwishlist}/></>;
   }
 
   //return (

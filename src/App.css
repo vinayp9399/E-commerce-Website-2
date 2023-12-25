@@ -64,3 +64,10 @@ a:hover {
   bottom: 0px;
 }
 
+.ul1 {
+  display:flex;
+  list-style:none;
+  padding: 0px;
+  justify-content: space-between;
+}
+
