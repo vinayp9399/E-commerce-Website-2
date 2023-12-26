@@ -14,7 +14,7 @@ export function WishlistItems(props) {
                 <div className="card-body">
                     <h5 className="card-title">{props.name}</h5>
                     <p style={{color:"green"}} className="card-text">Rs {props.price}</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                    <p className="card-text"><small className="text-muted"></small></p>
                 </div>
                 </div>
             </div>
