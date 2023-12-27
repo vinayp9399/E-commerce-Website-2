@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProductCard } from './ProductCard';
 
-export function Electronics({setName, setit, setwishlist}) {
+export function Electronics({setName, setit, setwishlist, setcart}) {
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
         const url = "https://fakestoreapi.com/products/category/electronics?limit=4";
@@ -14,7 +14,7 @@ export function Electronics({setName, setit, setwishlist}) {
     return (
         <>
          <div style={{display:'flex'}}>
-            {data.map((data1)=>{return(<><ProductCard title={data1.title} image={data1.image} description={data1.description} price={data1.price} rating={data1.rating} setit={setit} setName={setName} setwishlist={setwishlist} /></>)})} 
+            {data.map((data1)=>{return(<><ProductCard title={data1.title} image={data1.image} description={data1.description} price={data1.price} rating={data1.rating} setit={setit} setName={setName} setwishlist={setwishlist} setcart={setcart} /></>)})} 
             </div>   
         </>
     )

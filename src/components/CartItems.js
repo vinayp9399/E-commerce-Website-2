@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function WishlistItems(props) {
+export function CartItems(props) {
     
 
     return (
