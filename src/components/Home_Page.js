@@ -19,14 +19,14 @@ export function HomePage({setName, setit, setwishlist, setcart}) {
                 <li data-target="#carouselExampleIndicators" data-slide-to="1" ></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            <div className="carousel-inner" style={{height:"400px"}}>
-                <div className="carousel-item img3">
+            <div className="carousel-inner" style={{height:"300px"}}>
+                <div className="carousel-item img3 active">
                 <img className="d-block w-100" src="https://static.vecteezy.com/system/resources/previews/002/006/774/large_2x/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-backgroud-for-banner-market-ecommerce-free-vector.jpg" alt="First slide"/>
                 </div>
                 <div className="carousel-item">
                 <img className="d-block w-100 img3" src="https://s3.envato.com/files/145388275/01_preview3.jpg" alt="Second slide"/>
                 </div>
-                <div className="carousel-item active">
+                <div className="carousel-item">
                 <img className="d-block w-100 " src="https://cdn.dribbble.com/users/2073894/screenshots/13486402/media/eac9dbf93292e11e73a6f138873c0515.jpg" alt="Third slide"/>
                 </div>
             </div>
