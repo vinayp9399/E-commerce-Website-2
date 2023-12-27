@@ -70,7 +70,7 @@ const App = () => {
     case 4:
       return <><Navbar setit={setit}/><Jewelery  setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart}/></>;
     case 5:
-      return <><Navbar setit={setit}/><ProductDescription name={name} image={image} description={description} price={price} rate={rate} setwishlist={setwishlist} /></>;
+      return <><Navbar setit={setit}/><ProductDescription name={name} image={image} description={description} price={price} rate={rate} setwishlist={setwishlist} setcart={setcart} /></>;
     case 6:
       return <><Navbar setit={setit}/><Wishlist wishlists={wishlists}/></>;
     case 7:
