@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cart } from 'react-bootstrap-icons';
 
-export function Navbar({setit}) {
+export function Navbar({setit, cartcount}) {
 
     return (
         <>
@@ -33,7 +33,7 @@ export function Navbar({setit}) {
                 </form>
                 <a aria-current="page" style={{ cursor: 'pointer' }}><img className='image-icon2' src="https://cdn.onlinewebfonts.com/svg/img_86362.png" alt="" /></a>
                 <a onClick={()=>setit(6)} style={{ cursor: 'pointer' }} aria-current="page"><img className='image-icon2' src="https://static.vecteezy.com/system/resources/previews/000/284/952/original/flat-black-heart-icon-isolated-on-white-background-vector-illustration.jpg" alt="" /></a>
-                <a onClick={()=>setit(7)} style={{ cursor: 'pointer' }} aria-current="page"><img className='image-icon2' src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-shopping-cart_90604.png" alt="" /></a>
+                <a onClick={()=>setit(7)} style={{ cursor: 'pointer' }} aria-current="page"><i class="fa" style={{fontSize:'26px'}}>&#xf07a;</i><span class='badge badge-warning' id='lblCartCount'>{cartcount}</span></a>
             </div>
 </nav>
         </>

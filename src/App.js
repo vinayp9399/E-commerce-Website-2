@@ -25,6 +25,7 @@ const App = () => {
 
   const [wishlists, setwishlists]=useState([]);
   const [CartProducts, setCartProducts]=useState([]);
+  const [cartcount, setcartcount]=useState(0);
   
   let clickMe=(name,image,description, price,rate)=>{
     setName(name);
@@ -58,26 +59,30 @@ const App = () => {
   }
   };
 
+  let countcartup=()=>{
+    setcartcount(cartcount+1);
+  }
+
 
 
   switch (screen) {
     case 1:
-      return <><Navbar setit={setit}/><Men setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart}/></>;
+      return <><Navbar setit={setit} cartcount={cartcount}/><Men setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup}/></>;
     case 2:
-      return <><Navbar setit={setit}/><Women  setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart}/></>;
+      return <><Navbar setit={setit} cartcount={cartcount}/><Women  setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart}/></>;
     case 3:
-      return <><Navbar setit={setit}/><Electronics  setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart}/></>;
+      return <><Navbar setit={setit} cartcount={cartcount}/><Electronics  setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart}/></>;
     case 4:
-      return <><Navbar setit={setit}/><Jewelery  setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart}/></>;
+      return <><Navbar setit={setit} cartcount={cartcount}/><Jewelery  setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart}/></>;
     case 5:
-      return <><Navbar setit={setit}/><ProductDescription name={name} image={image} description={description} price={price} rate={rate} setwishlist={setwishlist} setcart={setcart} /></>;
+      return <><Navbar setit={setit} cartcount={cartcount}/><ProductDescription name={name} image={image} description={description} price={price} rate={rate} setwishlist={setwishlist} setcart={setcart} /></>;
     case 6:
-      return <><Navbar setit={setit}/><Wishlist wishlists={wishlists}/></>;
+      return <><Navbar setit={setit} cartcount={cartcount}/><Wishlist wishlists={wishlists}/></>;
     case 7:
-      return <><Navbar setit={setit}/><Cart CartProducts={CartProducts}/></>;    
+      return <><Navbar setit={setit} cartcount={cartcount}/><Cart CartProducts={CartProducts}/></>;    
       
     case 0:
-      return <><Navbar setit={setit}/><HomePage setName={clickMe} setit={setit} setwishlist={setwishlist}/></>;
+      return <><Navbar setit={setit} cartcount={cartcount}/><HomePage setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup}/></>;
   }
 
   //return (

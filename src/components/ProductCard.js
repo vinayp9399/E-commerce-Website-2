@@ -2,6 +2,11 @@ import React from 'react'
 
 export function ProductCard(props) {
     
+    const cartFunction=()=>{
+        props.setcart(props.title,props.image,props.price);
+        props.countcartup();
+    }
+    
 
     return (
         <>
@@ -10,7 +15,7 @@ export function ProductCard(props) {
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
                     <h5 style={{color:"green"}}>Rs {props.price}</h5>
-                    <a onClick={()=>{props.setcart(props.title,props.image,props.price)}} className="btn btn-primary m-2">Add to Cart</a>
+                    <a onClick={cartFunction} className="btn btn-primary m-2">Add to Cart</a>
                     <a onClick={()=>{props.setwishlist(props.title,props.image,props.price)}}><img className='image-icon2' src="https://clipart-library.com/images_k/heart-symbol-transparent/heart-symbol-transparent-21.png" alt="" /></a>
                 </div>
                 </div>  
