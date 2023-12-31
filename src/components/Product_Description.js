@@ -8,10 +8,10 @@ export function ProductDescription(props) {
         <div className="product_Desc">
         <h1>{props.name}</h1>
         <h4 style={{color:"green"}}>Rs {props.price}</h4>
-        <p>{props.rate}</p>
+        <h6>{props.rate} <img className="image-icon4" src="https://pixlok.com/wp-content/uploads/2021/07/Rating-SVG-Icon-s9fd.png" alt="" /></h6>
         <p>{props.description}</p>
-        <a onClick={()=>{props.setcart(props.name,props.image,props.price)}} className="btn btn-primary m-2">Add to Cart</a>
-        <a onClick={()=>{props.setwishlist(props.name,props.image,props.price)}}><img className='image-icon2' src="https://k7.pngheat.com/preview/95/220/943/heart-red-icon-symbol-red-heart-transparent-png-clip-art.jpg" alt="" /></a>
+        <a onClick={()=>{props.setcart(props.name,props.image,props.price); props.countcartup();}} className="btn btn-primary m-2">Add to Cart</a>
+        <a onClick={()=>{props.setwishlist(props.name,props.image,props.price); props.countwishup();}}><img className='image-icon2' src="https://clipart-library.com/images_k/heart-symbol-transparent/heart-symbol-transparent-21.png" alt="" /></a>
         </div>
         </>
     )

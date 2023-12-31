@@ -22,6 +22,16 @@
   margin-right:12px;
 }
 
+.image-icon3{
+  width:30px;
+  height:30px;
+}
+
+.image-icon4{
+  width:30px;
+  height:30px;
+}
+
 .img3{
   height:300px;
 }
@@ -33,7 +43,7 @@
 }
 
 .input1{
-  width:600px;
+  width:592px;
   border-width: 2px;
   border-color: black;
 }

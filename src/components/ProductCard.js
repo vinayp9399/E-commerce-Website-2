@@ -6,7 +6,11 @@ export function ProductCard(props) {
         props.setcart(props.title,props.image,props.price);
         props.countcartup();
     }
-    
+
+    const wishFunction=()=>{
+        props.setwishlist(props.title,props.image,props.price);
+        props.countwishup();
+    }
 
     return (
         <>
@@ -16,7 +20,7 @@ export function ProductCard(props) {
                     <h5 className="card-title">{props.title}</h5>
                     <h5 style={{color:"green"}}>Rs {props.price}</h5>
                     <a onClick={cartFunction} className="btn btn-primary m-2">Add to Cart</a>
-                    <a onClick={()=>{props.setwishlist(props.title,props.image,props.price)}}><img className='image-icon2' src="https://clipart-library.com/images_k/heart-symbol-transparent/heart-symbol-transparent-21.png" alt="" /></a>
+                    <a onClick={wishFunction}><img className='image-icon2' src="https://clipart-library.com/images_k/heart-symbol-transparent/heart-symbol-transparent-21.png" alt="" /></a>
                 </div>
                 </div>  
         </>

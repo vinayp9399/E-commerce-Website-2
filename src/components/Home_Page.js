@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProductCard } from './ProductCard';
 
-export function HomePage({setName, setit, setwishlist, setcart, countcartup}) {
+export function HomePage({setName, setit, setwishlist, setcart, countcartup, countwishup}) {
 
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
@@ -42,7 +42,7 @@ export function HomePage({setName, setit, setwishlist, setcart, countcartup}) {
             <div className='rounded m-1 shadow-lg'>
             <h1>Top Products</h1>
             <div style={{display:'flex'}}>
-            {data.map((data1)=>{return(<><ProductCard title={data1.title} image={data1.image} description={data1.description} price={data1.price} rating={data1.rating} setit={setit} setName={setName} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup}/></>)})} 
+            {data.map((data1)=>{return(<><ProductCard title={data1.title} image={data1.image} description={data1.description} price={data1.price} rating={data1.rating} setit={setit} setName={setName} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} countwishup={countwishup}/></>)})} 
             </div>
             </div>
         </>

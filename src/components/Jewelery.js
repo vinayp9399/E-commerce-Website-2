@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProductCard } from './ProductCard';
 
-export function Jewelery({setName, setit, setwishlist, setcart}) {
+export function Jewelery({setName, setit, setwishlist, setcart, countcartup, countwishup}) {
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
         const url = "https://fakestoreapi.com/products/category/jewelery?limit=4";
@@ -14,7 +14,7 @@ export function Jewelery({setName, setit, setwishlist, setcart}) {
     return (
         <>
          <div style={{display:'flex'}}>
-            {data.map((data1)=>{return(<><ProductCard title={data1.title} image={data1.image} description={data1.description} price={data1.price} rating={data1.rating} setit={setit} setName={setName} setwishlist={setwishlist} setcart={setcart} /></>)})} 
+            {data.map((data1)=>{return(<><ProductCard title={data1.title} image={data1.image} description={data1.description} price={data1.price} rating={data1.rating} setit={setit} setName={setName} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} countwishup={countwishup} /></>)})} 
             </div>   
         </>
     )
