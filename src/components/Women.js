@@ -19,7 +19,7 @@ export function Women({setName, setit, setwishlist, setcart, countcartup, countw
         {
                     IsLoading===true ?
                     <div className="loader">
-                        <Spinner color="black" />
+                        <Spinner color="white" />
                     </div>
                     : 
                     <div style={{display:'flex'}}>

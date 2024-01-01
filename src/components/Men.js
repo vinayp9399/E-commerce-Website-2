@@ -18,7 +18,7 @@ export function Men({setName, setit, setwishlist, setcart, countcartup, countwis
         {
                     IsLoading===true ?
                     <div className="loader">
-                        <Spinner color="black" />
+                        <Spinner color="white" />
                     </div>
                     : 
                     <div style={{display:'flex'}}>

@@ -18,7 +18,7 @@ export function Electronics({setName, setit, setwishlist, setcart, countcartup, 
         {
                     IsLoading===true ?
                     <div className="loader">
-                        <Spinner color="black" />
+                        <Spinner color="white" />
                     </div>
                     : 
                     <div style={{display:'flex'}}>

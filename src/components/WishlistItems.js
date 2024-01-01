@@ -1,20 +1,23 @@
 import React from 'react'
 
 export function WishlistItems(props) {
-    
+    const cartFunction=()=>{
+        props.setcart(props.name,props.image,props.price);
+        props.countcartup();
+    }
 
     return (
         <>
             <div className="card mb-3 shadow">
             <div className="row no-gutters">
                 <div className="col-md-4">
-                <img style={{height:"200px"}} src={props.image} className="card-img" alt="..."/>
+                <img style={{height:"150px", width:"200px"}} src={props.image} className="card-img" alt="..."/>
                 </div>
                 <div className="col-md-8">
                 <div className="card-body">
                     <h5 className="card-title">{props.name}</h5>
-                    <p style={{color:"green"}} className="card-text">Rs {props.price}</p>
-                    <p className="card-text"><small className="text-muted"></small></p>
+                    <h6 style={{color:"green"}} className="card-text">Rs {props.price}</h6>
+                    <a onClick={cartFunction} className="btn btn-primary m-2">Add to Cart</a>
                 </div>
                 </div>
             </div>

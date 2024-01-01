@@ -40,8 +40,8 @@ const App = () => {
     setScreen(e);
   };
 
-  let setwishlist=(name,image,price)=>{ 
-    let a = {'name':name,'image':image,'price':price};
+  let setwishlist=(name,image,price,rate)=>{ 
+    let a = {'name':name,'image':image,'price':price };
     if(a.name!==''){
     //let updatedwishlist = [...wishlists,a];
     wishlists.push(a);
@@ -82,7 +82,7 @@ const App = () => {
     case 5:
       return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><ProductDescription name={name} image={image} description={description} price={price} rate={rate} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} countwishup={countwishup} /></>;
     case 6:
-      return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Wishlist wishlists={wishlists}/></>;
+      return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Wishlist wishlists={wishlists} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} countwishup={countwishup}/></>;
     case 7:
       return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Cart CartProducts={CartProducts}/></>;    
       

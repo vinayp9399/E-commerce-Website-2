@@ -46,7 +46,7 @@ export function HomePage({setName, setit, setwishlist, setcart, countcartup, cou
             {
                     IsLoading===true ?
                     <div className="loader">
-                        <Spinner color="black" />
+                        <Spinner color="white" />
                     </div>
                     : 
                     <div style={{display:'flex'}}>
