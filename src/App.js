@@ -40,7 +40,7 @@ const App = () => {
     setScreen(e);
   };
 
-  let setwishlist=(name,image,price,rate)=>{ 
+  let setwishlist=(name,image,price)=>{ 
     let a = {'name':name,'image':image,'price':price };
     if(a.name!==''){
     //let updatedwishlist = [...wishlists,a];
@@ -48,6 +48,16 @@ const App = () => {
     //setwishlists(updatedwishlist);
     //console.log(updatedwishlist);
   }
+  };
+
+  let wishitemDelete=(name,image,price)=>{
+    setwishcount(wishcount-1);
+    for(let x of wishlists){
+      if(x.name===name){
+        let index = wishlists.indexOf(x);
+        wishlists.splice(index, 1);
+      }
+    }
   };
 
   let setcart=(name,image,price)=>{ 
@@ -62,11 +72,11 @@ const App = () => {
 
   let countcartup=()=>{
     setcartcount(cartcount+1);
-  }
+  };
 
   let countwishup=()=>{
     setwishcount(wishcount+1);
-  }
+  };
 
 
 
@@ -82,7 +92,7 @@ const App = () => {
     case 5:
       return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><ProductDescription name={name} image={image} description={description} price={price} rate={rate} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} countwishup={countwishup} /></>;
     case 6:
-      return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Wishlist wishlists={wishlists} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} countwishup={countwishup}/></>;
+      return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Wishlist wishlists={wishlists} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} wishitemDelete={wishitemDelete}/></>;
     case 7:
       return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Cart CartProducts={CartProducts}/></>;    
       
