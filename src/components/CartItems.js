@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export function CartItems(props) {
+
+    const [a, seta] = useState(1);
+
+    let b = a*(props.price);
+
+    
+    useEffect(() => {
+        props.totalprice(b);
+    }, [props,b])
+
     
 
     return (
@@ -32,25 +42,25 @@ export function CartItems(props) {
                        
                         <div className="d-flex mb-4" style={{maxWidth:"300px"}}>
                         <button className="btn btn-primary px-3 me-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                            <i className="fas fa-minus"></i>
+                            onClick={()=>{seta(a-1)}}>
+                            <i style={{fontWeight:'bold'}}>-</i>
                         </button>
 
-                        <div className="form-outline">
-                            <input id="form1" min="0" name="quantity" value="1" type="number" className="form-control" />
+                        <div id="form12" className="form-outline">
+                            <input onClick={()=>props.totalprice(b)} id="input" min="0" name="quantity" value={a} type="number" className="form-control" />
                             <label className="form-label" for="form1">Quantity</label>
                         </div>
 
                         <button className="btn btn-primary px-3 ms-2"
-                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                            <i className="fas fa-plus"></i>
+                            onClick={()=>{seta(a+1)}}>
+                            <i style={{fontWeight:'bold'}}>+</i>
                         </button>
                         </div>
                         
 
                         
                         <p className="text-start text-md-center">
-                        <strong>Rs {props.price}</strong>
+                            <strong>Rs {b}</strong>
                         </p>
                        
                     </div>

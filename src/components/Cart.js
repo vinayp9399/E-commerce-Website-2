@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CartItems } from './CartItems'
 
-export function Cart({CartProducts, cartitemDelete}) {
+export function Cart({CartProducts, cartitemDelete, cartcount}) {
+
+    const [totalprice1, settotalprice1] = useState(0); 
+    let m = 0;
+    
+
+    const totalprice=(e)=>{
+            m = m + e;        
+        
+        console.log(CartProducts);
+            settotalprice1(m);
+    }
+
+    useEffect(() => {
+        console.log(CartProducts.length);
+        if(cartcount===0){
+        settotalprice1(0);
+        }
+    }, [cartcount])
+
+    
     
 
     return (
@@ -16,7 +36,7 @@ export function Cart({CartProducts, cartitemDelete}) {
                 </div>
                 <div className="card-body">
                     
-                {CartProducts.map((cart1)=>{return<CartItems name={cart1.name} image={cart1.image} price={cart1.price} cartitemDelete={cartitemDelete}/>})}
+                {CartProducts.map((cart1)=>{return<CartItems name={cart1.name} image={cart1.image} price={cart1.price} cartitemDelete={cartitemDelete} id={cart1.name[0]} totalprice={totalprice}/>})}
                     
 
                     
@@ -40,9 +60,6 @@ export function Cart({CartProducts, cartitemDelete}) {
                     <img className="me-2" width="45px"
                     src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
                     alt="Mastercard" />
-                    <img className="me-2" width="45px"
-                    src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.webp"
-                    alt="PayPal acceptance mark" />
                 </div>
                 </div>
             </div>
@@ -56,7 +73,7 @@ export function Cart({CartProducts, cartitemDelete}) {
                     <li
                         className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                         Products
-                        <span>$53.98</span>
+                        <span>Rs {totalprice1}</span>
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center px-0">
                         Shipping
@@ -70,7 +87,7 @@ export function Cart({CartProducts, cartitemDelete}) {
                             <p className="mb-0">(including VAT)</p>
                         </strong>
                         </div>
-                        <span><strong>$53.98</strong></span>
+                        <span><strong>Rs {totalprice1}</strong></span>
                     </li>
                     </ul>
 

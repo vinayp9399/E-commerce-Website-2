@@ -22,21 +22,21 @@ export function HomePage({setName, setit, setwishlist, setcart, countcartup, cou
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div className="carousel-inner" style={{height:"400px"}}>
-                <div className="carousel-item img3">
+                <div className="carousel-item">
                 <img className="d-block w-100" src="https://static.vecteezy.com/system/resources/previews/002/006/774/large_2x/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-backgroud-for-banner-market-ecommerce-free-vector.jpg" alt="First slide"/>
                 </div>
                 <div className="carousel-item">
-                <img className="d-block w-100 img3" src="https://s3.envato.com/files/145388275/01_preview3.jpg" alt="Second slide"/>
+                <img className="d-block w-100" src="https://s3.envato.com/files/145388275/01_preview3.jpg" alt="Second slide"/>
                 </div>
                 <div className="carousel-item active">
                 <img className="d-block w-100 " src="https://cdn.dribbble.com/users/2073894/screenshots/13486402/media/eac9dbf93292e11e73a6f138873c0515.jpg" alt="Third slide"/>
                 </div>
             </div>
-            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a onClick={()=>{}} className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="sr-only"></span>
             </a>
-            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a onClick={()=>{}} className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="sr-only"></span>
             </a>

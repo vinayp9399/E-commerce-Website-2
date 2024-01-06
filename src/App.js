@@ -60,7 +60,7 @@ const App = () => {
     }
   };
 
-  let cartitemDelete=(name,image,price)=>{
+  let cartitemDelete=(name)=>{
     setcartcount(cartcount-1);
     for(let x of CartProducts){
       if(x.name===name){
@@ -104,7 +104,7 @@ const App = () => {
     case 6:
       return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Wishlist wishlists={wishlists} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} wishitemDelete={wishitemDelete}/></>;
     case 7:
-      return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Cart CartProducts={CartProducts} cartitemDelete={cartitemDelete}/></>;    
+      return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><Cart CartProducts={CartProducts} cartitemDelete={cartitemDelete} cartcount={cartcount}/></>;    
       
     case 0:
       return <><Navbar setit={setit} cartcount={cartcount} wishcount={wishcount}/><HomePage setName={clickMe} setit={setit} setwishlist={setwishlist} setcart={setcart} countcartup={countcartup} countwishup={countwishup}/></>;
