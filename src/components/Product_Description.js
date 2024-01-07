@@ -11,8 +11,8 @@ export function ProductDescription(props) {
         <h4 style={{color:"green"}}>Rs {props.price}</h4>
         <h6>{props.rate} <img className="image-icon4" src="https://pixlok.com/wp-content/uploads/2021/07/Rating-SVG-Icon-s9fd.png" alt="" /></h6>
         <p>{props.description}</p>
-        <a onClick={()=>{props.setcart(props.name,props.image,props.price); props.countcartup(); alert("Added to Cart!");}} className="btn btn-primary m-2">Add to Cart</a>
-        <a onClick={()=>{props.setwishlist(props.name,props.image,props.price); props.countwishup(); alert("Added to Wishlist!");}}><img className='image-icon2' src="https://clipart-library.com/images_k/heart-symbol-transparent/heart-symbol-transparent-21.png" alt="" /></a>
+        <a onClick={()=>{props.setcart(props.name,props.image,props.price); props.countcartup()}} className="btn btn-primary m-2">Add to Cart</a>
+        <a onClick={()=>{props.setwishlist(props.name,props.image,props.price); props.countwishup()}}><img className='image-icon2' src="https://clipart-library.com/images_k/heart-symbol-transparent/heart-symbol-transparent-21.png" alt="" /></a>
         </div></div>
         </>
     )
