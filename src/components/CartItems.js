@@ -60,7 +60,7 @@ export function CartItems(props) {
 
                         
                         <p className="text-start text-md-center">
-                            <strong>Rs {b}</strong>
+                            <strong>$ {b}</strong>
                         </p>
                        
                     </div>

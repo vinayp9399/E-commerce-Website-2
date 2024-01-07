@@ -16,7 +16,7 @@ export function WishlistItems(props) {
                 <div className="col-md-8">
                 <div className="card-body">
                     <h5 className="card-title">{props.name}</h5>
-                    <h6 style={{color:"green"}} className="card-text">Rs {props.price}</h6>
+                    <h6 style={{color:"green"}} className="card-text">$ {props.price}</h6>
                     <a onClick={cartFunction} className="btn btn-primary m-2">Add to Cart</a>
                     <a onClick={()=>props.wishitemDelete(props.name,props.image,props.price)} className="btn btn-danger">Delete</a>
                 </div>

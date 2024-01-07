@@ -73,7 +73,7 @@ export function Cart({CartProducts, cartitemDelete, cartcount}) {
                     <li
                         className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                         Products
-                        <span>Rs {totalprice1}</span>
+                        <span>$ {totalprice1}</span>
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center px-0">
                         Shipping
@@ -87,7 +87,7 @@ export function Cart({CartProducts, cartitemDelete, cartcount}) {
                             <p className="mb-0">(including VAT)</p>
                         </strong>
                         </div>
-                        <span><strong>Rs {totalprice1}</strong></span>
+                        <span><strong>$ {totalprice1}</strong></span>
                     </li>
                     </ul>
 
