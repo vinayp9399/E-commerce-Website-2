@@ -1,6 +1,7 @@
 import React from 'react'
 import { ProductCard } from './ProductCard';
 import { Spinner } from 'reactstrap';
+import { Carousel1 } from './Carousel1';
 
 export function HomePage({setName, setit, setwishlist, setcart, countcartup, countwishup}) {
 
@@ -15,32 +16,7 @@ export function HomePage({setName, setit, setwishlist, setcart, countcartup, cou
       }, []);
     return (
         <>
-          <div id="carouselExampleIndicators" className="carousel slide rounded m-1 shadow-lg" data-ride="carousel">
-            <ol className="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1" ></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div className="carousel-inner" style={{height:"400px"}}>
-                <div className="carousel-item">
-                <img className="d-block w-100" src="https://static.vecteezy.com/system/resources/previews/002/006/774/large_2x/paper-art-shopping-online-on-smartphone-and-new-buy-sale-promotion-backgroud-for-banner-market-ecommerce-free-vector.jpg" alt="First slide"/>
-                </div>
-                <div className="carousel-item">
-                <img className="d-block w-100" src="https://s3.envato.com/files/145388275/01_preview3.jpg" alt="Second slide"/>
-                </div>
-                <div className="carousel-item active">
-                <img className="d-block w-100 " src="https://cdn.dribbble.com/users/2073894/screenshots/13486402/media/eac9dbf93292e11e73a6f138873c0515.jpg" alt="Third slide"/>
-                </div>
-            </div>
-            <a onClick={()=>{}} className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only"></span>
-            </a>
-            <a onClick={()=>{}} className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only"></span>
-            </a>
-            </div> 
+            <Carousel1/>
             <div className='rounded m-1 shadow-lg'>
             <h1>Top Products</h1>
             {

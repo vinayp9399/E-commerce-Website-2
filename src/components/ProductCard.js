@@ -14,8 +14,8 @@ export function ProductCard(props) {
 
     return (
         <>
-          <div className="card" style={{width: "18rem", marginRight:"10px", marginLeft:"10px"}}>
-                <a style={{ cursor: 'pointer' }} onClick={()=>{props.setName(props.title,props.image,props.description,props.price,props.rating.rate); props.setit(5);}}><img className="card-img-top image4" src={props.image} alt="Card image cap"/></a>
+          <div className="card shadow" style={{width: "18rem", marginRight:"10px", marginLeft:"10px", marginBottom:"10px"}}>
+                <div className="card-img-top" style={{backgroundColor:"black"}}><a style={{ cursor: 'pointer' }} onClick={()=>{props.setName(props.title,props.image,props.description,props.price,props.rating.rate); props.setit(5);}}><img className="card-img-top image4" src={props.image} alt="Card image cap"/></a></div>
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
                     <h5 style={{color:"green"}}>Rs {props.price}</h5>
